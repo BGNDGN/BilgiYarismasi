@@ -1,0 +1,164 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    position: relative; 
+    margin: 0; 
+}
+
+
+body::before,
+body::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 10px; 
+    background-color: #f1c40f; 
+    z-index: 1; 
+}
+
+body::before {
+    left: 0; 
+}
+
+body::after {
+    right: 0; 
+}
+
+.ad-box {
+    display: flex;
+    position: absolute;
+    width: 200px;
+    height: 100%;
+    background-color: #f1c40f;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    justify-content: center;   
+    align-items: center;       
+    z-index: 2; 
+}
+
+.ad-left {
+    top: 0; 
+    left: 0;
+}
+
+.ad-right {
+    top: 0; 
+    right: 0;
+}
+
+#Baslik {
+    text-align: center;
+    font-size: 40px;
+}
+
+#Cizgi {
+    width: 100%;
+}
+
+#Sorular {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+}   
+    
+#Butonlar {
+    display: block;
+    height: 40px;
+    width: 100%;
+    margin-top: 20px;
+    background-color: white;
+    color: black;
+    border: 3px solid gray;
+    border-radius: 50px;
+    font-size: 20px;
+}
+  
+#Butonlar:hover {
+    background-color: gray;
+    color: white;
+    transition: 0.2s;
+}
+  
+#Answer {
+    display: block;
+    color: gray;
+    margin-top: 20px;
+    font-size: 20px;
+    padding: 5px;
+}
+
+
+.main-content {
+    position: relative;
+    width: 100%; 
+    padding: 20px; 
+}
+
+#Next {
+    position: absolute; 
+    bottom: 70px; 
+    right: 20px; 
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#Next:hover {
+    background-color: #c70303;
+    color: black;
+    transition: 0.2s;
+}
+  
+#Skor {
+    display: block;
+    text-align: center;
+    text-decoration: underline;
+    font-size: 22px;
+}
+  
+#Sonuc {
+    display: block;
+    text-align: center;
+    margin-top: -10px;
+    font-size: 22px;
+}
+
+#Butonlar.correct {
+    background-color: green;
+    color: white;
+}
+  
+#Butonlar.incorrect {
+    background-color: red;
+    color: white;
+}
+  
+button.disabled {
+    pointer-events: none; 
+    opacity: 0.6; 
+}
+ 
+button.correct:not(.disabled) {
+    background-color: green;
+}
+  
+button.incorrect:not(.disabled) {
+    background-color: red;
+}  
+
+button.correct-answer {
+    background-color: green !important;
+    color: white !important;
+  }
+  
